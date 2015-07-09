@@ -82,7 +82,7 @@ class ImgurClient(object):
         if refresh_token is not None:
             self.auth = AuthWrapper(access_token, refresh_token, client_id, client_secret)
 
-        self.credits = self.get_credits()
+        self.credits = {}
 
     def set_user_auth(self, access_token, refresh_token):
         self.auth = AuthWrapper(access_token, refresh_token, self.client_id, self.client_secret)
